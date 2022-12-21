@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,7 @@ class HomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              // Custom App Bar
               Container(
                 padding: EdgeInsets.only(right: 20, left: 15, top: 10),
                 child: Row(
@@ -21,7 +23,7 @@ class HomePage extends StatelessWidget {
                       size: 30,
                     ),
                     Container(
-                      //padding: EdgeInsets.all(8),
+                      padding: EdgeInsets.all(8),
                       decoration: BoxDecoration(
                           color: Color.fromARGB(255, 243, 136, 93),
                           borderRadius: BorderRadius.circular(10),
@@ -31,11 +33,75 @@ class HomePage extends StatelessWidget {
                               blurRadius: 2,
                             ),
                           ]),
-                      child: InkWell(
-                        onTap: () {},
-                        child: Icon(CupertinoIcons.cart),
+                      child: Badge(
+                        badgeColor: Colors.red,
+                        padding: EdgeInsets.all(7),
+                        badgeContent: Text(
+                          "3",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                        child: InkWell(
+                          onTap: () {},
+                          child: Icon(
+                            CupertinoIcons.cart,
+                            size: 30,
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
                     ),
+                  ],
+                ),
+              ),
+
+              //Welcome Text
+              Container(
+                alignment: Alignment.centerLeft,
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Welcome",
+                      style: TextStyle(
+                        fontSize: 35,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "What do you want to Buy?",
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ],
+                ),
+              ),
+
+              //Search Widget
+              Container(
+                //margin: EdgeInsets.all(15),
+                //padding: EdgeInsets.symmetric(horizontal:15),
+                height: 50,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  //borderradius: BorderRadius.circular(20),
+                ),
+                child: Row(
+                  children: [
+                    Icon(Icons.search),
+                    Container(
+                      margin: EdgeInsets.only(left: 10),
+                      width: 250,
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: "Search here...",
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                    Icon(Icons.filter_list),
                   ],
                 ),
               ),
