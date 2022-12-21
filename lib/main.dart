@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocerystoreapp/pages/HomePage.dart';
 import 'package:grocerystoreapp/pages/SplashScreen.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         "/": (context) => SplashScreen(),
-        //"homePage": (context) => HomePage(),
+        "homePage": (context) => HomePage(),
       },
     );
   }
