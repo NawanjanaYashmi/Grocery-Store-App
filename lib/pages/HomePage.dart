@@ -81,12 +81,12 @@ class HomePage extends StatelessWidget {
 
               //Search Widget
               Container(
-                //margin: EdgeInsets.all(15),
-                //padding: EdgeInsets.symmetric(horizontal:15),
+                margin: EdgeInsets.all(15),
+                padding: EdgeInsets.symmetric(horizontal: 15),
                 height: 50,
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  //borderradius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
                   children: [
@@ -101,8 +101,17 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
+                    Spacer(),
                     Icon(Icons.filter_list),
                   ],
+                ),
+              ),
+
+              //Products Widgets
+              Container(
+                padding: EdgeInsets.only(top: 20),
+                decoration: BoxDecoration(
+                  color: Colors.white,
                 ),
               ),
             ],
