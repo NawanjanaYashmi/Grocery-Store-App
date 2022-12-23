@@ -1,6 +1,7 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:grocerystoreapp/widgets/ItemsWidget.dart';
 import 'package:grocerystoreapp/widgets/PopularItemsWidget.dart';
 
 import '../widgets/CategoriesWidget.dart';
@@ -125,6 +126,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     CategoriesWidget(),
                     PopularItemsWidget(),
+                    ItemsWidget(),
                   ],
                 ),
               ),

@@ -34,12 +34,13 @@ class PopularItemsWidget extends StatelessWidget {
           child: Row(children: [
             for (int i = 1; i < 8; i++)
               Container(
-                //margin: EdgeInsets.all(10),
-                //padding: EdgeInsets.all(5),
+                margin: EdgeInsets.all(10),
+                padding: EdgeInsets.all(5),
                 height: 100,
                 width: 150,
                 decoration: BoxDecoration(
                   color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withOpacity(0.5),
