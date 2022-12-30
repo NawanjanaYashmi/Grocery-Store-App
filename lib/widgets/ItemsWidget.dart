@@ -58,7 +58,39 @@ class ItemsWidget extends StatelessWidget {
                       onTap: () {},
                       child: Container(
                         margin: EdgeInsets.all(10),
-                        child: Image.asset("images/$i.png"),
+                        child: Image.asset(
+                          "images/$i.png",
+                          height: 110,
+                          width: 110,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 8),
+                      child: Container(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Item Title",
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF555555),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 8),
+                      child: Container(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Fresh Fruit 2KG",
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF555555),
+                          ),
+                        ),
                       ),
                     ),
                   ],
