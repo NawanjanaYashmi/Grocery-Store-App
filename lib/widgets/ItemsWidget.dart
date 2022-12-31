@@ -55,7 +55,9 @@ class ItemsWidget extends StatelessWidget {
                 child: Column(
                   children: [
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, "itemPage");
+                      },
                       child: Container(
                         margin: EdgeInsets.all(10),
                         child: Image.asset(
@@ -96,6 +98,7 @@ class ItemsWidget extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 5),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             "\$20",
