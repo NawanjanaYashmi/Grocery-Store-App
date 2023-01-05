@@ -37,14 +37,14 @@ class ItemPage extends StatelessWidget {
                 margin: EdgeInsets.only(top: 20),
                 padding: EdgeInsets.all(15),
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 243, 136, 93),
+                  color: Colors.blue,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30),
                   ),
                 ),
                 child: Column(
-                  //crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
                       padding: EdgeInsets.only(top: 10, bottom: 15),
@@ -62,23 +62,80 @@ class ItemPage extends StatelessWidget {
                           Row(
                             children: [
                               Container(
-                                padding: EdgeInsets.all(5),
+                                padding: EdgeInsets.all(3),
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(20),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.5),
-                                      spreadRadius: 2,
-                                      blurRadius: 8,
-                                    ),
-                                  ],
                                 ),
                                 child: Icon(
                                   CupertinoIcons.minus,
                                 ),
                               ),
+                              Container(
+                                margin: EdgeInsets.symmetric(horizontal: 10),
+                                child: Text(
+                                  "01",
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.all(3),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Icon(
+                                  CupertinoIcons.plus,
+                                ),
+                              ),
                             ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Row(
+                      //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                          size: 30,
+                        ),
+                        Text(
+                          "4.8 (230)",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )
+                      ],
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Description:",
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            "This is the description of the product, here you can ore here  you can write morehere you can write more",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 17,
+                            ),
+                            textAlign: TextAlign.justify,
                           ),
                         ],
                       ),
