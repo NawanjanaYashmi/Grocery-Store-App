@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ItemPage extends StatelessWidget {
@@ -48,7 +49,7 @@ class ItemPage extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.only(top: 10, bottom: 15),
                       child: Row(
-                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             "Fruit Title",
@@ -64,6 +65,17 @@ class ItemPage extends StatelessWidget {
                                 padding: EdgeInsets.all(5),
                                 decoration: BoxDecoration(
                                   color: Colors.white,
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 8,
+                                    ),
+                                  ],
+                                ),
+                                child: Icon(
+                                  CupertinoIcons.minus,
                                 ),
                               ),
                             ],
