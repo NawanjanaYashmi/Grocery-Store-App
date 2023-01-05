@@ -58,6 +58,16 @@ class ItemPage extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
+                          Row(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ),
