@@ -62,7 +62,7 @@ class ItemPage extends StatelessWidget {
                           Row(
                             children: [
                               Container(
-                                padding: EdgeInsets.all(4),
+                                padding: EdgeInsets.all(3),
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(20),
@@ -83,7 +83,7 @@ class ItemPage extends StatelessWidget {
                                 ),
                               ),
                               Container(
-                                padding: EdgeInsets.all(4),
+                                padding: EdgeInsets.all(3),
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(20),
@@ -96,6 +96,16 @@ class ItemPage extends StatelessWidget {
                           ),
                         ],
                       ),
+                    ),
+                    Row(
+                      //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                          size: 30,
+                        ),
+                      ],
                     ),
                   ],
                 ),
