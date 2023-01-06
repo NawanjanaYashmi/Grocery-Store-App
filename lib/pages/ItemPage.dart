@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:grocerystoreapp/widgets/BottomBar.dart';
 
 class ItemPage extends StatelessWidget {
   @override
@@ -146,6 +147,7 @@ class ItemPage extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: BottomBar(),
     );
   }
 }
