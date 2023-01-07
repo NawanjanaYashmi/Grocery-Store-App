@@ -1,8 +1,10 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:grocerystoreapp/widgets/BottomCartSheet.dart';
 import 'package:grocerystoreapp/widgets/ItemsWidget.dart';
 import 'package:grocerystoreapp/widgets/PopularItemsWidget.dart';
+import 'package:sliding_sheet/sliding_sheet.dart';
 
 import '../widgets/CategoriesWidget.dart';
 
@@ -47,7 +49,19 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            showSlidingBottomSheet(
+                              context,
+                              builder: (context) {
+                                return SlidingSheetDialog(
+                                    elevation: 8,
+                                    cornerRadius: 16,
+                                    builder: (context, state) {
+                                      return BottomCartSheet();
+                                    });
+                              },
+                            );
+                          },
                           child: Icon(
                             CupertinoIcons.cart,
                             size: 30,
