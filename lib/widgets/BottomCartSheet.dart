@@ -39,17 +39,39 @@ class BottomCartSheet extends StatelessWidget {
                             ),
                           ),
                           Column(
-                            //crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                margin: EdgeInsets.only(bottom: 8),
-                                //alignment: Alignment.centerLeft,
+                                margin: EdgeInsets.only(bottom: 15),
                                 child: Text(
                                   "Item Title",
-                                  style: TextStyle(),
+                                  style: TextStyle(
+                                    color: Color.fromARGB(255, 243, 136, 93),
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                child: Text(
+                                  "\$20",
+                                  style: TextStyle(
+                                    color: Color.fromARGB(255, 243, 136, 93),
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
                             ],
+                          ),
+                          Spacer(),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10),
+                            child: Column(
+                              children: [
+                                Icon(Icons.disabled_by_default),
+                              ],
+                            ),
                           ),
                         ],
                       ),
